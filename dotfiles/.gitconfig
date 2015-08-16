@@ -1,0 +1,20 @@
+[user]
+	name = Forrest Desjardins
+	email = desjardinsfg@gmail.com
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[alias]
+	co = checkout
+	ec = config --global -e
+	cob = checkout -b
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	cm = !git add -A && git commit -m
+	sp = !git add -A && git commit -m 'SP'
+	wip = !git add -u && git commit -m 'WIP'
+	l = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
+	ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>' --decorate --numstat
+	fl = log -u
+	s = status
+	st = status

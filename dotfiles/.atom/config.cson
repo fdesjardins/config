@@ -1,0 +1,22 @@
+"*":
+  "exception-reporting":
+    userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
+  welcome:
+    showOnStartup: false
+  "autocomplete-plus": {}
+  core:
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
+    showIndentGuide: true
+    autoIndentOnPaste: false
+    fontSize: 20
+  emmet: {}
+  "atom-beautify":
+    _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"
+    php_cs_fixer_path: "/usr/local/bin/php-cs-fixer"
+  minimap: {}
+  "linter-htmlhint": {}

@@ -6,17 +6,18 @@
   "autocomplete-plus": {}
   core:
     themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
+      "one-dark-ui"
+      "zenburn"
     ]
   editor:
     invisibles: {}
     showIndentGuide: true
     autoIndentOnPaste: false
-    fontSize: 20
+    fontSize: 13
   emmet: {}
   "atom-beautify":
     _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"
     php_cs_fixer_path: "/usr/local/bin/php-cs-fixer"
   minimap: {}
   "linter-htmlhint": {}
+  "one-dark-ui": {}

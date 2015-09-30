@@ -7,16 +7,13 @@
   core:
     themes: [
       "one-dark-ui"
-      "atom-dark-syntax"
-    ]
-    disabledPackages: [
-      "linter-xo"
+      "zenburn"
     ]
   editor:
     invisibles: {}
     showIndentGuide: true
     autoIndentOnPaste: false
-    fontSize: 13
+    fontSize: 17
   emmet: {}
   "atom-beautify":
     _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"

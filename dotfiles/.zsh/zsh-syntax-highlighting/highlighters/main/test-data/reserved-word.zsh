@@ -28,10 +28,10 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[assign]=$unused_highlight
-BUFFER='A=1 b=("foo" bar)'
+ZSH_HIGHLIGHT_STYLES[reserved-word]=$unused_highlight
+BUFFER='repeat "1" do done'
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
-  "8 12 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "foo"
+  "1 6 $ZSH_HIGHLIGHT_STYLES[reserved-word]" # repeat
+  "8 10 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "1"
 )

@@ -28,10 +28,10 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[assign]=$unused_highlight
-BUFFER='A=1 b=("foo" bar)'
+BUFFER='!foo bar !baz'
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
-  "8 12 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "foo"
+  "1 4 $ZSH_HIGHLIGHT_STYLES[history-expansion]" # !foo
+  "6 8 $ZSH_HIGHLIGHT_STYLES[default]" # bar
+  "10 13 $ZSH_HIGHLIGHT_STYLES[history-expansion]" # !baz
 )

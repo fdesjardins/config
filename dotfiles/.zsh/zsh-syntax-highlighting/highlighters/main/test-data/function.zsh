@@ -28,10 +28,21 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[assign]=$unused_highlight
-BUFFER='A=1 b=("foo" bar)'
+ZSH_HIGHLIGHT_STYLES[function]=$unused_highlight
+cd() {
+  builtin cd "$@"
+}
+ls() {
+  command ls "$@"
+}
+BUFFER='cd;ls'
+
+# Use $unused_highlight to see that function highlighting has precedence over command and builtin
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
-  "8 12 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "foo"
+  "1 2 $ZSH_HIGHLIGHT_STYLES[function]" # cd
+  "4 5 $ZSH_HIGHLIGHT_STYLES[function]" # ls
 )
+
+# don't 'unfunction cd ls', since cd() and ls() should still be a functions
+# when _zsh_highlight runs.  Leaving the wrapper functions is harmless.

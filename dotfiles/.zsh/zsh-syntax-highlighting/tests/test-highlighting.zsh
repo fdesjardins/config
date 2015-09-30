@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # -------------------------------------------------------------------------------------------------
-# Copyright (c) 2010-2011 zsh-syntax-highlighting contributors
+# Copyright (c) 2010-2015 zsh-syntax-highlighting contributors
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification, are permitted
@@ -49,6 +49,9 @@
 
 local -a errors highlight_zone
 local -A observed_result
+local -A save_ZSH_HIGHLIGHT_STYLES
+integer something_failed=0
+local unused_highlight='bg=red,underline' # a style unused by anything else, for tests to use
 
 # Load the main script.
 . ${0:h:h}/zsh-syntax-highlighting.zsh
@@ -56,17 +59,21 @@ local -A observed_result
 # Activate the highlighter.
 ZSH_HIGHLIGHT_HIGHLIGHTERS=($1)
 
+# Cache a pristine set of styles.
+save_ZSH_HIGHLIGHT_STYLES=( "${(@kv)ZSH_HIGHLIGHT_STYLES}" )
+
 # Process each test data file in test data directory.
-for data_file in ${0:h:h}/highlighters/$1/test-data/*; do
+for data_file in ${0:h:h}/highlighters/$1/test-data/*.zsh; do
 
   # Load the data and prepare checking it.
-  BUFFER= ; expected_region_highlight=(); errors=()
+  PREBUFFER= BUFFER= ; expected_region_highlight=(); errors=()
   echo -n "* ${data_file:t:r}: "
+  ZSH_HIGHLIGHT_STYLES=( "${(@kv)save_ZSH_HIGHLIGHT_STYLES}" )
   . $data_file
 
-  # Check the data declares $BUFFER.
-  if [[ ${#BUFFER} -eq 0 ]]; then
-    errors+=("'BUFFER' is not declared or blank.")
+  # Check the data declares $PREBUFFER or $BUFFER.
+  if [[ ${#PREBUFFER} -eq 0 && ${#BUFFER} -eq 0 ]]; then
+    errors+=("Either 'PREBUFFER' or 'BUFFER' must be declared and non-blank")
   else
 
     # Check the data declares $expected_region_highlight.
@@ -83,9 +90,17 @@ for data_file in ${0:h:h}/highlighters/$1/test-data/*; do
       observed_result=()
       for i in {1..${#region_highlight}}; do
         highlight_zone=${(z)region_highlight[$i]}
-        for j in {$highlight_zone[1]..$highlight_zone[2]}; do
-          observed_result[$j]=$highlight_zone[3]
-        done
+        integer start=$highlight_zone[1] end=$highlight_zone[2]
+        if (( start < end )) # region_highlight ranges are half-open
+        then
+          (( --end )) # convert to closed range, like expected_region_highlight
+          (( ++start, ++end )) # region_highlight is 0-indexed; expected_region_highlight is 1-indexed
+          for j in {$start..$end}; do
+            observed_result[$j]=$highlight_zone[3]
+          done
+        else
+          # noop range; ignore.
+        fi
       done
 
       # Then we compare the observed result with the expected one.
@@ -107,9 +122,12 @@ for data_file in ${0:h:h}/highlighters/$1/test-data/*; do
     echo "OK"
   else
     echo "KO"
+    (( something_failed=1 ))
     for error in $errors; do
       echo "   - $error"
     done
   fi
 
 done
+
+exit $something_failed

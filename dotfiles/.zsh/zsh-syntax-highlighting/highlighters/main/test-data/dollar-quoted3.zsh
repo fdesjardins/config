@@ -28,10 +28,12 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[assign]=$unused_highlight
-BUFFER='A=1 b=("foo" bar)'
+# Similar to double-quoted2.zsh
+ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=$unused_highlight
+# This test checks that the '1' gets highlighted correctly.  Do not append to the BUFFER.
+BUFFER=": \$'\xa1"
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
-  "8 12 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "foo"
+  "3 4 $ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]" # $'
+  "5 8 $ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]" # \xa1
 )

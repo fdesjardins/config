@@ -28,10 +28,11 @@
 # vim: ft=zsh sw=2 ts=2 et
 # -------------------------------------------------------------------------------------------------
 
-ZSH_HIGHLIGHT_STYLES[assign]=$unused_highlight
-BUFFER='A=1 b=("foo" bar)'
+# Redirection before and after the command word are implemented differently; test both.
+ZSH_HIGHLIGHT_STYLES[redirection]=$unused_highlight
+BUFFER='<<<foo echo >>&!bar'
 
 expected_region_highlight=(
-  "1 3 $ZSH_HIGHLIGHT_STYLES[assign]" # A=1
-  "8 12 $ZSH_HIGHLIGHT_STYLES[double-quoted-argument]" # "foo"
+  "1 3 $ZSH_HIGHLIGHT_STYLES[redirection]" # <<<
+  "13 16 $ZSH_HIGHLIGHT_STYLES[redirection]" # >>&!
 )

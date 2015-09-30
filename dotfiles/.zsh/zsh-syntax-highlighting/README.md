@@ -13,12 +13,15 @@ How to install
 
 * Arch Linux: [community/zsh-syntax-highlighting](https://www.archlinux.org/packages/zsh-syntax-highlighting) / [AUR/zsh-syntax-highlighting-git](https://aur.archlinux.org/packages/zsh-syntax-highlighting-git)
 * Gentoo: [mv overlay](http://gpo.zugaina.org/app-shells/zsh-syntax-highlighting)
+* Mac OS X / Homebrew: [brew install zsh-syntax-highlighting](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/zsh-syntax-highlighting.rb)
 
 ### In your ~/.zshrc
 
-* Download the script or clone this repository:
+* Clone this repository:
 
         git clone git://github.com/zsh-users/zsh-syntax-highlighting.git
+
+  (or [download a snapshot](https://github.com/zsh-users/zsh-syntax-highlighting/archive/master.tar.gz))
 
 * Source the script **at the end** of `~/.zshrc`:
 
@@ -44,6 +47,23 @@ How to install
 
         source ~/.zshrc
 
+
+FAQ
+---
+
+### Why must `zsh-syntax-highlighting.zsh` be sourced at the end of the `.zshrc` file?
+
+`zsh-syntax-highlighting.zsh` wraps ZLE widgets.  It must be sourced after all
+custom widgets have been created (i.e., after all `zle -N` calls and after
+running `compinit`).  Widgets created later will work, but will not update the
+syntax highlighting.
+
+### How are new releases announced?
+
+There is currently no "push" announcements channel.  However, the following alternatives exist:
+
+- GitHub's RSS feed of releases: https://github.com/zsh-users/zsh-syntax-highlighting/releases.atom
+- An anitya entry: https://release-monitoring.org/project/7552/
 
 How to tweak
 ------------

@@ -8,6 +8,7 @@ alias l="ls -l"
 alias ll="ls -lsai"
 alias ...="cd ../../.."
 alias ....="cd ../../../.."
+alias .....="cd ../../../../.."
 alias grep="grep --color=auto"
 
 alias rename-cc-kebab="rename -f 's/([a-z])([A-Z])/\$1-\$2/g; y/A-Z/a-z/'"
@@ -31,3 +32,6 @@ alias blm="xrandr --output DVI-0 --brightness .7 && xrandr --output DVI-1 --brig
 alias blh="xrandr --output DVI-0 --brightness 1 && xrandr --output DVI-1 --brightness .9"
 alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"
 alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight'"
+
+alias mkalias="create_alias"
+alias mkenvvar="create_envvar"

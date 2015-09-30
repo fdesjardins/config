@@ -13,8 +13,15 @@ zle -N insert-git-commit-m insert_git_commit_m
 insert_git_push () { zle -U "git push " }
 zle -N insert-git-push insert_git_push
 
-insert_super_git () { printf '" git push origin master'; zle -U 'git add . --all && git commit -m "' }
-zle -N insert-super-git insert_super_git
+create_alias () {
+  echo 'alias '$1'="'$2'"' >> ~/.zsh/aliases.zsh;
+  source ~/.zsh/aliases.zsh;
+}
+
+create_envvar () {
+  echo 'export '$1'="'$2'"' >> ~/.zsh/environment.zsh;
+  source ~/.zsh/environment.zsh;
+}
 
 bindkey '\e[3~' delete-char
 bindkey "^[s" insert-sudo
@@ -23,4 +30,3 @@ bindkey '^[a' insert-git-add
 bindkey '^[A' insert-git-add-all
 bindkey '^[c' insert-git-commit-m
 bindkey '^[p' insert-git-push
-bindkey '^[*' insert-super-git

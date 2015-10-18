@@ -1,4 +1,3 @@
-DISABLE_UPDATE_PROMPT=true
 DISABLE_CORRECTION=true
 
 plugins=(git git-extras node npm pep8 virtualenvwrapper pip python)

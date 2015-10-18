@@ -9,6 +9,9 @@
       "one-dark-ui"
       "zenburn"
     ]
+    disabledPackages: [
+      "linter-eslint"
+    ]
   editor:
     invisibles: {}
     showIndentGuide: true

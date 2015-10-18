@@ -4,13 +4,19 @@ export PATH=$PATH:$HOME/Workspace/nodejs/bin
 export PATH=$PATH:$HOME/Workspace/nodejs/n
 export PATH=$PATH:$HOME/.rvm/bin
 
-export ZSH=/home/forrest/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
+
+ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
 export TERM='xterm-256color'
+
 export ANSIBLE_NOCOWS=1
+
 export N_PREFIX=$HOME/Workspace/nodejs
 
-export WORKON_HOME=~/.virtualenvs
-source /etc/bash_completion.d/virtualenvwrapper
-
 export GOPATH=$HOME/Workspace/go
+
+export WORKON_HOME=$HOME/.virtualenvs

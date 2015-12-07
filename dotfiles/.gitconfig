@@ -12,6 +12,7 @@
 
 [alias]
 	ec = config --global -e
+	aliases = config --get-regexp alias
 
 	br = branch
 	co = checkout
@@ -23,8 +24,11 @@
 	cm = !git add -A && git commit -m
 	sp = !git add -A && git commit -m 'SP'
 	wip = !git add -u && git commit -m 'WIP'
+	sqwip = !git rebase -i $(git log --oneline --no-color | gawk '{lines[NR] = $1} /WIP/ {a=NR} END{print lines[a+1]}')
 	mb = !git branch --merged | grep -v '\\*' | grep -v master
 	rmmb = !git branch --merged | grep -v '\\*' | grep -v master | xargs -n 1 git branch -d
+	ammend = commit --ammend
+	ignorelocal = update-index --assume-unchanged
 
 	l = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
 	ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>' --decorate --numstat

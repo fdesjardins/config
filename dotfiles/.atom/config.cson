@@ -1,26 +1,34 @@
 "*":
-  "exception-reporting":
-    userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
-  welcome:
-    showOnStartup: false
+  "atom-beautify":
+    general:
+      _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"
+    php:
+      cs_fixer_path: "/usr/local/bin/php-cs-fixer"
   "autocomplete-plus": {}
   core:
+    disabledPackages: [
+      "linter-eslint"
+      "linter-rust"
+    ]
     themes: [
       "one-dark-ui"
-      "zenburn"
+      "atom-dark-syntax"
     ]
     disabledPackages: [
       "linter-eslint"
     ]
   editor:
+    autoIndentOnPaste: false
+    fontSize: 15
     invisibles: {}
     showIndentGuide: true
-    autoIndentOnPaste: false
-    fontSize: 17
   emmet: {}
-  "atom-beautify":
-    _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"
-    php_cs_fixer_path: "/usr/local/bin/php-cs-fixer"
-  minimap: {}
+  "exception-reporting":
+    userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
   "linter-htmlhint": {}
+  "linter-rust":
+    cargoCommand: "check"
+  minimap: {}
   "one-dark-ui": {}
+  welcome:
+    showOnStartup: false

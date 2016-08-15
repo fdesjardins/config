@@ -3,6 +3,7 @@ export PATH=$PATH:$HOME/Workspace/bin
 export PATH=$PATH:$HOME/Workspace/nodejs/bin
 export PATH=$PATH:$HOME/Workspace/nodejs/n
 export PATH=$PATH:$HOME/.rvm/bin
+export PATH=$PATH:$HOME/Workspace/go/bin
 
 export ZSH=$HOME/.oh-my-zsh
 

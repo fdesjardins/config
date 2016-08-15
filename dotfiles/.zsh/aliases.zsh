@@ -27,9 +27,7 @@ alias savepage="wget -E -H -k -K -p"
 alias serve="python -m SimpleHTTPServer"
 alias get="wget --continue --progress=bar --timestamping"
 
-alias bll="xrandr --output DVI-0 --brightness .4 && xrandr --output DVI-1 --brightness .3"
-alias blm="xrandr --output DVI-0 --brightness .7 && xrandr --output DVI-1 --brightness .6"
-alias blh="xrandr --output DVI-0 --brightness 1 && xrandr --output DVI-1 --brightness .9"
+alias brightness="xrandr --output $(xrandr -q | grep ' connected' | awk '{print $1}') --brightness"
 alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"
 alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight'"
 

@@ -1,6 +1,6 @@
 source ~/.zsh/zsh-git-prompt/zshrc.sh
 
-local p="%(?,%{$fg[green]%}:)%{$reset_color%},%{$fg[red]%}:/%{$reset_color%})"
+local p="λ"
 local current_time='%B%t%b'
 local user_host='%{$terminfo[bold]$fg[green]%}%n@%m%{$reset_color%}'
 local current_dir='%{$terminfo[bold]$fg[blue]%}%~%{$reset_color%}'

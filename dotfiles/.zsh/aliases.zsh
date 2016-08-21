@@ -16,9 +16,9 @@ alias rename-cc-snake="rename -f 's/([a-z])([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 alias rename-tc-kebab="rename -f 's/([a-z])\ ([A-Z])/\$1-\$2/g; y/A-Z/a-z/'"
 alias rename-tc-snake="rename -f 's/([a-z])\ ([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
-alias install="sudo apt-get -y install"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
+alias install="sudo apt -y install"
 
 alias cpv="rsync -pogh --progress"
 alias rnet="sudo restart networking"

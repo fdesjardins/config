@@ -6,6 +6,7 @@ packages=(
   "curl"
   "fortune-mod"
   "git"
+  "tmux"
   "vim"
   "zsh"
 )

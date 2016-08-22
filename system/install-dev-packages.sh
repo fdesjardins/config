@@ -6,6 +6,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 packages=(
   "atom"
   "deluge"
+  "fonts-inconsolata"
   "gimp"
   "google-chrome-stable"
   "inkscape"

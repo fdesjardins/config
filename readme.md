@@ -1,18 +1,19 @@
-# Config [![License][license-image]][license-url]
+# Config 
 
 My dotfiles and other configuration files and utilities
 
-### Install
+## Install
 
-#### curl
+### curl
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/fdesjardins/config/master/install.sh)"
 ```
 
-#### wget
+### wget
 ```bash
 sh -c "$(wget https://raw.githubusercontent.com/fdesjardins/config/master/install.sh -O -)"
 ```
 
-[license-url]: https://github.com/fdesjardins/config/blob/master/license
-[license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+## License
+
+MIT © Forrest Desjardins

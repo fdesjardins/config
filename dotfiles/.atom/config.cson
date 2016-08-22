@@ -6,22 +6,15 @@
       cs_fixer_path: "/usr/local/bin/php-cs-fixer"
   "autocomplete-plus": {}
   core:
-    disabledPackages: [
-      "linter-eslint"
-      "linter-rust"
-    ]
+    disabledPackages: []
     themes: [
       "one-dark-ui"
       "atom-dark-syntax"
-    ]
-    disabledPackages: [
-      "linter-eslint"
     ]
   editor:
     autoIndentOnPaste: false
     fontSize: 15
     invisibles: {}
-    showIndentGuide: true
   emmet: {}
   "exception-reporting":
     userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"

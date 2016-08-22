@@ -1,16 +1,14 @@
-# package-sync
 packages: [
   "atom-beautify"
   "autocomplete-paths"
-  "autocomplete-plus"
-  "autocomplete-snippets"
   "clipboard-history"
   "editorconfig"
-  "emmet"
   "file-icons"
+  "indent-guide-improved"
   "language-nginx"
-  "language-sql"
   "linter"
+  "linter-eslint"
+  "markdown-preview-plus"
   "minimap"
   "package-sync"
 ]

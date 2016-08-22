@@ -1,6 +1,6 @@
 # Config 
 
-My dotfiles and other configuration files and utilities
+My dotfiles and other configuration files and utilities. Only tested on Ubuntu/Debian Linux distros.
 
 ## Install
 

@@ -33,3 +33,5 @@ alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backligh
 
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
+
+alias hue="node /home/forrest/Workspace/github/hue/index.js"

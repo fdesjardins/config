@@ -6,18 +6,20 @@
       cs_fixer_path: "/usr/local/bin/php-cs-fixer"
   "autocomplete-plus": {}
   core:
-    disabledPackages: []
+    telemetryConsent: "limited"
     themes: [
-      "one-dark-ui"
+      "atom-dark-ui"
       "atom-dark-syntax"
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 15
+    fontSize: 13
     invisibles: {}
   emmet: {}
   "exception-reporting":
     userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
+  hidpi:
+    scaleFactor: 1.3
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"

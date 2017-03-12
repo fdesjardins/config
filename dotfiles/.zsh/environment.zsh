@@ -8,6 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # NodeJS
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH=$NPM_PACKAGES/bin:$PATH
+export NVM_DIR="/home/forrest/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Ruby
 export PATH=$PATH:$HOME/.rvm/bin

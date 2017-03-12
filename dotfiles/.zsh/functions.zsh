@@ -7,7 +7,11 @@ zle -N insert-git-add insert_git_add
 insert_git_add_all () { zle -U "git add . --all"; }
 zle -N insert-git-add-all insert_git_add_all
 
-insert_git_commit_m () { zle beginning-of-line; zle -U "git commit -m " }
+insert_git_commit_m () {
+  zle quote-line
+  zle beginning-of-line
+  zle -U "git commit -m "
+}
 zle -N insert-git-commit-m insert_git_commit_m
 
 insert_git_push () { zle -U "git push " }

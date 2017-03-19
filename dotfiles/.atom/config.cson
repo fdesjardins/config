@@ -8,8 +8,8 @@
   core:
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
-      "atom-dark-syntax"
+      "nord-atom-ui"
+      "nord-atom-syntax"
     ]
   editor:
     autoIndentOnPaste: false

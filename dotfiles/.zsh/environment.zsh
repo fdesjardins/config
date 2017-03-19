@@ -20,6 +20,7 @@ export GOPATH=$HOME/Workspace/go
 
 # Python
 export WORKON_HOME=$HOME/.virtualenvs
+export PATH=$PATH:$HOME/Workspace/anaconda3/bin
 
 # Misc
 export ANSIBLE_NOCOWS=1

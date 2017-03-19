@@ -17,7 +17,7 @@ alias rename-tc-kebab="rename -f 's/([a-z])\ ([A-Z])/\$1-\$2/g; y/A-Z/a-z/'"
 alias rename-tc-snake="rename -f 's/([a-z])\ ([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 
 alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
+alias upgrade="sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
 alias install="sudo apt -y install"
 
 alias cpv="rsync -pogh --progress"

@@ -35,3 +35,4 @@ alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
 
 alias hue="node /home/forrest/Workspace/github/hue/index.js"
+alias wikiquote="node /home/forrest/Workspace/npm/wikiquote-cli/index.js"

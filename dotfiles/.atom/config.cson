@@ -25,5 +25,7 @@
     cargoCommand: "check"
   minimap: {}
   "one-dark-ui": {}
+  "standard-formatter":
+    formatOnSave: true
   welcome:
     showOnStartup: false

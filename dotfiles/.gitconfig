@@ -22,7 +22,7 @@
 	cm = commit -m
 	aa = add -A
 	pom = push origin master
-	am = commit --amend
+	amd = commit --amend
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
 	wip = !git add -u && git commit -m 'WIP'
 	sqwip = !git rebase -i $(git log --oneline --no-color | gawk '{lines[NR] = $1} /WIP/ {a=NR} END{print lines[a+1]}')
@@ -31,6 +31,8 @@
 	ignorelocal = update-index --assume-unchanged
   files = "!f() { git diff --name-status "$1^" "$1"; }; f"
   fromdev = "!f() { git fetch origin dev; git co origin/dev; git cob "$1"; }; f"
+  fc = "!f() { git fetch origin "$1"; git co "$1"; }; f"
+  undo = reset HEAD^
 
 	l = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
 	ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>' --decorate --numstat

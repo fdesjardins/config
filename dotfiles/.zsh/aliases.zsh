@@ -24,8 +24,11 @@ alias cpv="rsync -pogh --progress"
 alias rnet="sudo restart networking"
 alias ports="netstat -tulanp"
 alias savepage="wget -E -H -k -K -p"
-alias serve="python -m SimpleHTTPServer"
+alias serve="python3 -m http.server"
 alias get="wget --continue --progress=bar --timestamping"
+
+alias blab="cat /dev/urandom | head -c"
+alias blab64="base64 /dev/urandom | head -c"
 
 alias brightness="xrandr --output $(xrandr -q | grep ' connected' | awk '{print $1}') --brightness"
 alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"

@@ -1,6 +1,7 @@
 alias dotzshrc="atom ~/.zshrc --nw"
 alias ohmyzsh="atom ~/.oh-my-zsh --nw"
 alias dotemacs="emacs ~/.emacs --nw"
+alias szsh=". ~/.zshrc"
 
 alias df="df -H"
 alias ls="ls --color -F"
@@ -29,6 +30,7 @@ alias get="wget --continue --progress=bar --timestamping"
 
 alias blab="cat /dev/urandom | head -c"
 alias blab64="base64 /dev/urandom | head -c"
+alias moo="cowsay"
 
 alias brightness="xrandr --output $(xrandr -q | grep ' connected' | awk '{print $1}') --brightness"
 alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"
@@ -39,3 +41,6 @@ alias mkenvvar="create_envvar"
 
 alias hue="node /home/forrest/Workspace/github/hue/index.js"
 alias wikiquote="node /home/forrest/Workspace/npm/wikiquote-cli/index.js"
+
+alias mknm="cpv ~/Workspace/etc/nm/{.*,*}"
+alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"

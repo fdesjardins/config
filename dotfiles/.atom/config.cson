@@ -24,7 +24,14 @@
     cargoCommand: "check"
   minimap: {}
   "one-dark-ui": {}
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    scrollSyncType: "Vertical + Horizontal"
   "standard-formatter":
     formatOnSave: true
+  "tree-view": {}
   welcome:
     showOnStartup: false

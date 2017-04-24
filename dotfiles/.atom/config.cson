@@ -4,6 +4,10 @@
       _analyticsUserId: "50b04dc5-cac8-4ff3-8f5e-995eab8fc4be"
     php:
       cs_fixer_path: "/usr/local/bin/php-cs-fixer"
+    sql:
+      identifiers: "lower"
+      indent_size: 2
+      keywords: "lower"
   "autocomplete-plus": {}
   core:
     telemetryConsent: "limited"

@@ -32,7 +32,7 @@ alias blab="cat /dev/urandom | head -c"
 alias blab64="base64 /dev/urandom | head -c"
 alias moo="cowsay"
 
-alias brightness="xrandr --output $(xrandr -q | grep ' connected' | awk '{print $1}') --brightness"
+alias brightness="node /home/forrest/brightness.js"
 alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"
 alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight'"
 

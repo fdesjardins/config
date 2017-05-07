@@ -15,8 +15,8 @@ export NVM_DIR="/home/forrest/.nvm"
 export PATH=$PATH:$HOME/.rvm/bin
 
 # Go
-export PATH=$PATH:$HOME/Workspace/go/bin
-export GOPATH=$HOME/Workspace/go
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=/home/forrest/Workspace/github
 
 # Python
 export WORKON_HOME=$HOME/.virtualenvs

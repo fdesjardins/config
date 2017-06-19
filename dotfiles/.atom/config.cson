@@ -8,6 +8,9 @@
       identifiers: "lower"
       indent_size: 2
       keywords: "lower"
+  "atom-ternjs":
+    inlineFnCompletionDocumentation: true
+    useSnippets: true
   "autocomplete-plus": {}
   core:
     telemetryConsent: "limited"
@@ -17,7 +20,7 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
   emmet: {}
   "exception-reporting":

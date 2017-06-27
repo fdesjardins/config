@@ -15,12 +15,12 @@
   core:
     telemetryConsent: "limited"
     themes: [
-      "nord-atom-ui"
-      "nord-atom-syntax"
+      "one-dark-ui"
+      "atom-dark-syntax"
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 13
+    fontSize: 12
     invisibles: {}
   emmet: {}
   "exception-reporting":

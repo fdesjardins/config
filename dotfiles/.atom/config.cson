@@ -16,7 +16,7 @@
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "one-dark-matte-syntax"
+      "nord-atom-syntax"
     ]
   editor:
     autoIndentOnPaste: false

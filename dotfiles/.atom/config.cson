@@ -30,6 +30,8 @@
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"
+  "linter-ui-default":
+    panelHeight: 69.23077392578125
   minimap: {}
   "one-dark-ui": {}
   "split-diff":

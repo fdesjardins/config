@@ -19,6 +19,7 @@
 	cob = checkout -b
 	s = status
 	c = commit
+	chp = cherry-pick
 	cm = commit -m
 	aa = add -A
 	pom = push origin master

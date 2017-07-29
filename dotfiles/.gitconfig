@@ -42,3 +42,5 @@
 	review = fc
 [core]
 	editor = vim
+[color]
+	ui = auto

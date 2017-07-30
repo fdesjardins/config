@@ -26,3 +26,4 @@ export PATH=$PATH:$HOME/Workspace/anaconda3/bin
 
 # Misc
 export ANSIBLE_NOCOWS=1
+export USE_CCACHE="1"

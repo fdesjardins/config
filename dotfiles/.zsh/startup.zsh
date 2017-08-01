@@ -26,4 +26,4 @@ P=(
 
 wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} | cowsay
 
-source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+#source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

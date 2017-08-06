@@ -9,6 +9,7 @@ packages=(
   "tmux"
   "vim"
   "zsh"
+  "xclip"
 )
 
 sudo apt install -y "${packages[@]}"

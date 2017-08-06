@@ -13,14 +13,17 @@ packages=(
   "google-chrome-stable"
   "inkscape"
   "nginx"
-  "nodejs"
-  "nodejs-legacy"
-  "npm"
   "virtualbox"
   "vlc"
 )
 
 sudo apt install -y "${packages[@]}"
+
+# install nvm for managing nodejs
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+# install node
+nvm install node
 
 # place global npm packages in home directory
 # https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md
@@ -29,16 +32,12 @@ mkdir "${HOME}/.npm-packages"
 # global NodeJS packages
 npmPackages=(
   "eslint"
-  "generator-nm"
   "gulp"
   "loadtest"
   "np"
-  "npm"
   "npm-check-updates"
   "pm2"
-  "public-ip-cli"
-  "speed-test"
-  "yo"
+  "yarn"
 )
 
 npm install -g "${npmPackages[@]}"

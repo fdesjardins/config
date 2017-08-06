@@ -39,10 +39,8 @@ alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backligh
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
 
-alias hue="node /home/forrest/Workspace/github/hue/index.js"
-alias wikiquote="node /home/forrest/Workspace/npm/wikiquote-cli/index.js"
-
 alias mknm="cpv ~/Workspace/etc/nm/{.*,*}"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
+alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
 
 alias pgadmin="/home/forrest/Workspace/anaconda3/bin/python /home/forrest/Workspace/anaconda3/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py"

@@ -15,8 +15,6 @@
   core:
     disabledPackages: [
       "linter-glsl"
-      "linter-eslint"
-      "atom-ternjs"
     ]
     telemetryConsent: "limited"
     themes: [

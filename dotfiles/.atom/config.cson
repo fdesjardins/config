@@ -13,9 +13,6 @@
     useSnippets: true
   "autocomplete-plus": {}
   core:
-    disabledPackages: [
-      "linter-glsl"
-    ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
@@ -30,6 +27,8 @@
     userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
   hidpi:
     scaleFactor: 1.3
+  "linter-eslint":
+    fixOnSave: true
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"

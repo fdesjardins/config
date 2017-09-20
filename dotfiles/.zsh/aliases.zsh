@@ -41,8 +41,12 @@ alias mkenvvar="create_envvar"
 
 alias mknm="cpv ~/Workspace/etc/nm/{.*,*}"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
-alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip"
+alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n'$(cat ~/.ssh/id_rsa.pub)"
 
 alias pgadmin="/home/forrest/Workspace/anaconda3/bin/python /home/forrest/Workspace/anaconda3/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py"
 
 alias hue="node /home/forrest/Workspace/github/fdesjardins/hue/index.js"
+alias h-bu="hue brightness -d u -a"
+alias h-bd="hue brightness -d d -a"
+alias h-ru="hue redshift -d u -a"
+alias h-rd="hue redshift -d d -a"

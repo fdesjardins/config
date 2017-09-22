@@ -27,6 +27,7 @@
     userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
   hidpi:
     scaleFactor: 1.3
+  linter: {}
   "linter-eslint":
     fixOnSave: true
   "linter-htmlhint": {}

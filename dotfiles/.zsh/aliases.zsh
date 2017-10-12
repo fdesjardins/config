@@ -21,7 +21,7 @@ alias update="sudo apt update"
 alias upgrade="sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
 alias install="sudo apt -y install"
 
-alias cpv="rsync -pogh --progress"
+alias cpv="rsync -avh --progress"
 alias rnet="sudo restart networking"
 alias ports="netstat -tulanp"
 alias savepage="wget -E -H -k -K -p"
@@ -39,7 +39,7 @@ alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backligh
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
 
-alias mknm="cpv ~/Workspace/etc/nm/{.*,*}"
+alias mknm="cpv ~/Workspace/github/fdesjardins/nm/ ~/Workspace/npm/"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
 alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n'$(cat ~/.ssh/id_rsa.pub)"
 

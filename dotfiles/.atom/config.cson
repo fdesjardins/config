@@ -13,6 +13,10 @@
     useSnippets: true
   "autocomplete-plus": {}
   core:
+    disabledPackages: [
+      "atom-autocomplete-php"
+      "autocomplete-paths"
+    ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"

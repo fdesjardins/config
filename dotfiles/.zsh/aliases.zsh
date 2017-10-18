@@ -40,6 +40,7 @@ alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
 
 alias mknm="cpv ~/Workspace/github/fdesjardins/nm/ ~/Workspace/npm/"
+alias nodeup="nvm install node && nvm alias default node"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
 alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n'$(cat ~/.ssh/id_rsa.pub)"
 

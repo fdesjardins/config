@@ -6,7 +6,7 @@
       cs_fixer_path: "/usr/local/bin/php-cs-fixer"
     sql:
       identifiers: "lower"
-      indent_size: 2
+      indent_size: 0
       keywords: "lower"
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
@@ -44,6 +44,13 @@
     panelHeight: 69.23077392578125
   minimap: {}
   "one-dark-ui": {}
+  "pg-formatter":
+    editorOptions:
+      formatOnSave: true
+    pgFormatterOptions:
+      functionCase: "lowercase"
+      keywordCase: "lowercase"
+      spaces: 1
   "split-diff":
     diffWords: true
     ignoreWhitespace: true

@@ -20,6 +20,7 @@
     disabledPackages: [
       "atom-autocomplete-php"
       "autocomplete-paths"
+      "activate-power-mode"
     ]
     telemetryConsent: "limited"
     themes: [

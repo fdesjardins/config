@@ -1,5 +1,6 @@
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/sbin:/usr/local/bin:/opt/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$PATH:$HOME/Workspace/bin
+export PATH=$PATH:$HOME/Workspace/config/bin
 
 # Term
 export TERM='xterm-256color'

@@ -1,11 +1,14 @@
 #!/bin/bash
 
 packages=(
+  "apt-transport-https"
   "build-essential"
+  "ca-certificates"
   "cowsay"
   "curl"
   "fortune-mod"
   "git"
+  "software-properties-common"
   "tmux"
   "vim"
   "zsh"

@@ -24,6 +24,8 @@ P=(
   'Neil Degrasse Tyson'
 )
 
-wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} | cowsay
+NAME="${P[$(( $RANDOM % ${#P[@]} + 1 ))]}"
+QUOTE="$(wikiquote random $NAME)"
+echo "$QUOTE\n\n-- $NAME" | cowsay
 
 source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

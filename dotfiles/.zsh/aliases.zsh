@@ -4,7 +4,10 @@ alias dotemacs="emacs ~/.emacs --nw"
 alias szsh=". ~/.zshrc"
 
 alias df="df -H"
-alias ls="ls --color -F"
+case "$(uname)" in
+  Darwin*) alias ls="ls -G" ;;
+  Linux*)  alias ls="ls --color -F" ;;
+esac
 alias l="ls -l"
 alias ll="ls -lsai"
 alias ...="cd ../../.."
@@ -17,14 +20,18 @@ alias rename-cc-snake="rename -f 's/([a-z])([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 alias rename-tc-kebab="rename -f 's/([a-z])\ ([A-Z])/\$1-\$2/g; y/A-Z/a-z/'"
 alias rename-tc-snake="rename -f 's/([a-z])\ ([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 
-alias update="sudo apt update"
-alias upgrade="sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
-alias install="sudo apt -y install"
-alias apts="apt-cache search"
-alias aptsh="apt-cache show"
+case "$(uname)" in
+  Linux*)
+    alias update="sudo apt update"
+    alias upgrade="sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
+    alias install="sudo apt -y install"
+    alias apts="apt-cache search"
+    alias aptsh="apt-cache show"
+
+    alias rnet="sudo restart networking"
+;;esac
 
 alias cpv="rsync -avh --progress"
-alias rnet="sudo restart networking"
 alias ports="netstat -tulanp"
 alias savepage="wget -E -H -k -K -p"
 alias serve="python3 -m http.server"
@@ -42,12 +49,6 @@ alias dk="docker"
 alias dkrmi*="docker rmi $(docker images -a -q) -f"
 alias dkrm*="docker rm $(docker ps -a -q) -f"
 alias dkc="docker-compose"
-
-alias hue="node /home/forrest/Workspace/github/fdesjardins/hue/index.js"
-alias h-bu="hue brightness -d u -a"
-alias h-bd="hue brightness -d d -a"
-alias h-ru="hue redshift -d u -a"
-alias h-rd="hue redshift -d d -a"
 
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"

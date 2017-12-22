@@ -20,6 +20,7 @@ npmPackages=(
   "pm2"
   "tldr"
   "webpack"
+  "wikiquote-cli"
   "yarn"
 )
 

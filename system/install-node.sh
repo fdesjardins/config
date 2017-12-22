@@ -13,6 +13,7 @@ nvm alias default node
 
 # global NodeJS packages
 npmPackages=(
+  "deedee"
   "eslint"
   "gulp"
   "np"

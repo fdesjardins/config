@@ -20,6 +20,8 @@ alias rename-tc-snake="rename -f 's/([a-z])\ ([A-Z])/\$1_\$2/g; y/A-Z/a-z/'"
 alias update="sudo apt update"
 alias upgrade="sudo apt update && sudo apt -y upgrade && sudo apt -y autoremove"
 alias install="sudo apt -y install"
+alias apts="apt-cache search"
+alias aptsh="apt-cache show"
 
 alias cpv="rsync -avh --progress"
 alias rnet="sudo restart networking"
@@ -30,24 +32,22 @@ alias get="wget --continue --progress=bar --timestamping"
 
 alias blab="cat /dev/urandom | head -c"
 alias blab64="base64 /dev/urandom | head -c"
-alias moo="cowsay"
-
-alias brightness="node /home/forrest/brightness.js"
-alias kbbl0="sudo sh -c 'echo 0 > /sys/devices/platform/sony-laptop/kbd_backlight'"
-alias kbbl1="sudo sh -c 'echo 1 > /sys/devices/platform/sony-laptop/kbd_backlight'"
-
-alias mkalias="create_alias"
-alias mkenvvar="create_envvar"
 
 alias mknm="cpv ~/Workspace/github/fdesjardins/nm/ ~/Workspace/npm/"
 alias nodeup="nvm install node && nvm alias default node"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
-alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n'$(cat ~/.ssh/id_rsa.pub)"
+alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n\n'$(cat ~/.ssh/id_rsa.pub)"
 
-alias pgadmin="/home/forrest/Workspace/anaconda3/bin/python /home/forrest/Workspace/anaconda3/lib/python3.6/site-packages/pgadmin4/pgAdmin4.py"
+alias dk="docker"
+alias dkrmi*="docker rmi $(docker images -a -q) -f"
+alias dkrm*="docker rm $(docker ps -a -q) -f"
+alias dkc="docker-compose"
 
 alias hue="node /home/forrest/Workspace/github/fdesjardins/hue/index.js"
 alias h-bu="hue brightness -d u -a"
 alias h-bd="hue brightness -d d -a"
 alias h-ru="hue redshift -d u -a"
 alias h-rd="hue redshift -d d -a"
+
+alias mkalias="create_alias"
+alias mkenvvar="create_envvar"

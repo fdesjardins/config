@@ -7,7 +7,7 @@ P=(
   'Steve Jobs'
   'Bill Gates'
   'Elon Musk'
-  'Warren Buffet'
+  'Jed McCaleb'
 
   'Richard Feynman'
   'Albert Einstein'
@@ -16,13 +16,13 @@ P=(
 
   'Noam Chomsky'
   'Bill Nye'
-  'Neil Degrasse Tyson'
-  'Lawrence Krauss'
+  'Neil deGrasse Tyson'
+  'Adam Smith'
 
   'Nelson Mandela'
   'Mary Lasker'
-  'Jim Lovell'
   'Elie Wiesel'
+  'Eleanor Roosevelt'
 
   'Barack Obama'
   'Joe Biden'
@@ -32,9 +32,9 @@ P=(
   'John Lennon'
   'Stephen King'
   'Christopher Hitchens'
-  'Hunter S Thompson'
+  'Hunter S. Thompson'
 )
 
-wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} | cowsay
+wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} | cowsay -W 60
 
 source "${HOME}/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

@@ -1,27 +1,38 @@
 P=(
-  'Steve Jobs'
   'Robin Williams'
-  'Noam Chomsky'
   'Steven Wright'
-  'Bill Nye'
-  'Elon Musk'
-  'Stephen King'
-  'Vladimir Putin'
+  'George Carlin'
+  'Mitch Hedberg'
+
+  'Steve Jobs'
   'Bill Gates'
+  'Elon Musk'
   'Warren Buffet'
-  'Nelson Mandela'
-  'Bernie Sanders'
+
   'Richard Feynman'
   'Albert Einstein'
   'Donald Knuth'
   'Alan Turing'
+
+  'Noam Chomsky'
+  'Bill Nye'
+  'Neil Degrasse Tyson'
+  'Lawrence Krauss'
+
+  'Nelson Mandela'
   'Mary Lasker'
   'Jim Lovell'
-  'Ben Bernanke'
-  'Joe Biden'
-  'Tom Hanks'
   'Elie Wiesel'
-  'Neil Degrasse Tyson'
+
+  'Barack Obama'
+  'Joe Biden'
+  'Vladimir Putin'
+  'Abraham Lincoln'
+
+  'John Lennon'
+  'Stephen King'
+  'Christopher Hitchens'
+  'Hunter S Thompson'
 )
 
 wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} | cowsay

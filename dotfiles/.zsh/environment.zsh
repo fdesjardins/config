@@ -6,11 +6,6 @@ export PATH=$PATH:$HOME/Workspace/config/bin
 export TERM='xterm-256color'
 export ZSH=$HOME/.oh-my-zsh
 
-# NodeJS
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Ruby
 export PATH=$PATH:$HOME/.rvm/bin
 

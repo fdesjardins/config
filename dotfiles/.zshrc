@@ -1,5 +1,6 @@
 source ~/.zsh/environment.zsh
 source ~/.zsh/aliases.zsh
+source ~/.zsh/completions.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/prompt.zsh

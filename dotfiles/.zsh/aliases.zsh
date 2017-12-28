@@ -27,6 +27,7 @@ case "$(uname)" in
     alias install="sudo apt -y install"
     alias apts="apt-cache search"
     alias aptsh="apt-cache show"
+    alias aptv="apt-cache show | grep Version"
 
     alias rnet="sudo restart networking"
 ;;esac
@@ -46,8 +47,8 @@ alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sy
 alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n\n'$(cat ~/.ssh/id_rsa.pub)"
 
 alias dk="docker"
-alias dkrmi*="docker rmi $(docker images -a -q) -f"
-alias dkrm*="docker rm $(docker ps -a -q) -f"
+alias dkrmiall="docker rmi $(docker images -a -q) -f"
+alias dkrmall="docker rm $(docker ps -a -q) -f"
 alias dkc="docker-compose"
 
 alias mkalias="create_alias"

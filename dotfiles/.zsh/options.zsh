@@ -7,6 +7,7 @@ ZSH_THEME="af-magic"
 setopt AUTO_CD
 setopt NO_BEEP
 setopt EXTENDED_GLOB
+setopt HIST_IGNORE_SPACE
 
 HISTFILE=~/.zsh-history
 SAVEHIST=10000

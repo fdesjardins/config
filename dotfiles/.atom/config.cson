@@ -28,7 +28,7 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 12
+    fontSize: 15
     invisibles: {}
   emmet: {}
   "exception-reporting":

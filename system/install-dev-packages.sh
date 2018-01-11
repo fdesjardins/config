@@ -7,6 +7,7 @@ packages=(
   "gimp"
   "google-chrome-stable"
   "inkscape"
+  "ttf-inconsolata"
   "virtualbox"
   "vlc"
 )

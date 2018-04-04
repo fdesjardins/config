@@ -44,3 +44,6 @@
 	editor = vim
 [color]
 	ui = auto
+[rerere]
+	enabled = true
+	autoupdate = true

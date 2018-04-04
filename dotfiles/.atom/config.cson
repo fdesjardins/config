@@ -28,7 +28,6 @@
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 15
     invisibles: {}
   emmet: {}
   "exception-reporting":
@@ -38,9 +37,10 @@
       currentHeight: "19.76824061958003vh"
   hidpi:
     scaleFactor: 1
+  "language-babel":
+    autoIndentJSX: true
   linter: {}
-  "linter-eslint":
-    fixOnSave: true
+  "linter-eslint": {}
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"
@@ -56,6 +56,10 @@
       functionCase: "lowercase"
       keywordCase: "lowercase"
       spaces: 1
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    useEslint: true
   "split-diff":
     diffWords: true
     ignoreWhitespace: true
@@ -64,7 +68,8 @@
     scrollSyncType: "Vertical + Horizontal"
   "standard-formatter":
     formatOnSave: true
-  "tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".editorconfig.source":

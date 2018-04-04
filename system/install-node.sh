@@ -22,6 +22,9 @@ npmPackages=(
   "tldr"
   "webpack"
   "wikiquote-cli"
+  "fixpack"
+  "nodemon"
+  "httpserver"
 )
 
 npm install -g "${npmPackages[@]}"

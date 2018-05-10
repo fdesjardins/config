@@ -42,7 +42,7 @@ alias blab="cat /dev/urandom | head -c"
 alias blab64="base64 /dev/urandom | head -c"
 
 alias mknm="cpv ~/Workspace/github/fdesjardins/nm/ ~/Workspace/npm/"
-alias nodeup="nvm install node && nvm alias default node"
+alias nodeup="bash ~/Workspace/config/system/install-node.sh"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
 alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n\n'$(cat ~/.ssh/id_rsa.pub)"
 

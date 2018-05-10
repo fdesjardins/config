@@ -20,6 +20,8 @@
     disabledPackages: [
       "atom-autocomplete-php"
       "activate-power-mode"
+      "language-csharp"
+      "omnisharp-atom"
     ]
     telemetryConsent: "limited"
     themes: [

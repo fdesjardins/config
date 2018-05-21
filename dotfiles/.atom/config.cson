@@ -12,6 +12,9 @@
       identifiers: "lower"
       indent_size: 0
       keywords: "lower"
+  "atom-ide-ui":
+    "atom-ide-code-format": {}
+    use: {}
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
     useSnippets: true
@@ -22,6 +25,15 @@
       "activate-power-mode"
       "language-csharp"
       "omnisharp-atom"
+      "language-babel"
+      "busy-signal"
+      "git-time-machine"
+      "linter-sass-lint"
+      "prettier-atom"
+      "pigments"
+      "minimap"
+      "linter-docker"
+      "language-objective-c"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -42,13 +54,13 @@
   "language-babel":
     autoIndentJSX: true
   linter: {}
-  "linter-eslint": {}
+  "linter-eslint":
+    fixOnSave: true
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"
   "linter-ui-default":
-    panelHeight: 69.23077392578125
-    showPanel: true
+    panelHeight: 259
   minimap: {}
   "one-dark-ui": {}
   "pg-formatter":

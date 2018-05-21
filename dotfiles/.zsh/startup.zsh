@@ -29,10 +29,12 @@ P=(
   'Hunter S. Thompson'
 )
 
-# for person in $P
-# do
-#   wikiquote cache add $person
-# done
+if [ $RFWQ ]; then
+  for person in $P
+  do
+    wikiquote cache add $person
+  done
+fi
 
 wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} -m 240 | cowsay -W 60
 

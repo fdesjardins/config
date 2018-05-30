@@ -34,6 +34,7 @@
       "minimap"
       "linter-docker"
       "language-objective-c"
+      "linter"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -42,6 +43,7 @@
     ]
   editor:
     autoIndentOnPaste: false
+    fontSize: 15
     invisibles: {}
   emmet: {}
   "exception-reporting":
@@ -60,7 +62,7 @@
   "linter-rust":
     cargoCommand: "check"
   "linter-ui-default":
-    panelHeight: 259
+    panelHeight: 69.23077392578125
   minimap: {}
   "one-dark-ui": {}
   "pg-formatter":

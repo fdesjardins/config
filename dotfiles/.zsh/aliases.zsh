@@ -52,3 +52,8 @@ alias dknuke="docker system prune -a"
 
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
+
+alias ssh-cbtops-prod-db-01="ssh -i ~/.aws/cbtops.pem ubuntu@52.14.244.162"
+alias ssh-cbtops-prod-services-01="ssh -i ~/.aws/cbtops.pem ubuntu@18.221.237.105"
+alias ssh-cbtops-gitlab="ssh -i ~/.aws/cbtops.pem ubuntu@18.188.199.226"
+alias ssh-cbtops-prod-api-01="ssh -i ~/.aws/cbtops.pem ubuntu@18.217.27.106"

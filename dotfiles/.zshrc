@@ -1,11 +1,13 @@
-source ~/.zsh/environment.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/completions.zsh
-source ~/.zsh/options.zsh
-source ~/.zsh/functions.zsh
-source ~/.zsh/prompt.zsh
-source ~/.zsh/startup.zsh
-source ~/.zsh/etc.zsh
+\. ~/.zsh/environment.zsh
+\. ~/.zsh/aliases.zsh
+\. ~/.zsh/completions.zsh
+\. ~/.zsh/options.zsh
+\. ~/.zsh/functions.zsh
+\. ~/.zsh/prompt.zsh
+\. ~/.zsh/startup.zsh
+\. ~/.zsh/etc.zsh
+
+[ -s "~/.zsh/secrets.zsh" ] && \. "~/.zsh/secrets.zsh"  # This loads nvm
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

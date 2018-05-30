@@ -1,18 +1,30 @@
 #!/usr/bin/env bash
 
-P=(
-  'adds'
-)
+P='
+adds
+airport-diagrams
+bunyan-postgres-stream
+chart-supplements
+coverage-viewer
+deedee
+node-http-client-bench
+notams
+papergen
+papergen-cli
+paper-rulings
+proxycache
+terminal-procedures
+wikiquote
+wikiquote-cli
+'
 
-for person in $P
-do
-  cd ~/Workspace/github/fdesjardins/$P;
-  ncu -a;
-  npm i;
-  yarn;
-  git add .;
-  git commit -m "update dependencies";
-  np patch;
+for package in $P; do
+  cd ~/Workspace/github/fdesjardins/$package
+  ncu -a
+  npm i
+  yarn
+  git add .
+  git commit -m "update dependencies"
+  np patch
 done
-fi
 

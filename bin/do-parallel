@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-N=$1
-TASK=$2
-ARGS=$3
+function parse_args
+{
+  ARRAY=( "$@" )
+  N="${ARRAY[0]}"
+  TASK="${ARRAY[1]}"
+  ARGS=( "${ARRAY[@]:2}" )
+}
 
-open_fifo() {
+function open_fifo
+{
   mkfifo pipe-$$
   exec 3<>pipe-$$
   rm pipe-$$
@@ -14,17 +19,26 @@ open_fifo() {
   done
 }
 
-run_with_lock() {
+function run_with_lock
+{
   local x
-  read -u 3 -n 3 x && ((0==x)) || exit $x
+  read -u 3 -n 3 x && ((0 == x)) || exit $x
   (
     "$@"
     printf '%.3d' $? >&3
   )&
 }
 
-open_fifo $N
+function main
+{
+  parse_args "$@"
+  open_fifo $N
 
-for arg in $ARGS; do
-  run_with_lock $TASK $arg
-done
+  for arg in "${ARGS[@]}"; do
+    run_with_lock $TASK "$arg"
+  done
+
+  wait
+}
+
+main "$@"

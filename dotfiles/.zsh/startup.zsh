@@ -30,11 +30,9 @@ P=(
 )
 
 if [ $RFWQ ]; then
-  for person in $P
-  do
-    wikiquote cache add $person
-  done
+  do-parallel 5 'wikiquote cache add' "${P[@]}"
 fi
+wait
 
 wikiquote random ${P[$(( $RANDOM % ${#P[@]} + 1 ))]} -m 240 | cowsay -W 60
 

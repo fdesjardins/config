@@ -29,6 +29,7 @@
 	sqwip = !git rebase -i $(git log --oneline --no-color | gawk '{lines[NR] = $1} /WIP/ {a=NR} END{print lines[a+1]}')
 	mb = !git branch --merged | grep -v '\\*' | grep -v master
 	rmmb = !git branch --merged | grep -v '\\*' | grep -v master | xargs -n 1 git branch -d
+	rmb = branch -D
 	ignorelocal = update-index --assume-unchanged
 	files = "!f() { git diff --name-status "$1^" "$1"; }; f"
 	afromdev = "!f() { git fetch origin dev; git co origin/dev; git cob "$1"; }; f"
@@ -36,9 +37,10 @@
 	fc = "!f() { git fetch origin "$1"; git co "$1"; }; f"
 	undo = reset HEAD^
 
-	l = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
-	ll = log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>' --decorate --numstat
+	l = log --graph --pretty=format:'%C(yellow)%h%Creset%Cred%d%Creset %s %Cgreen(%cr) %C(bold blue)<%cn>%Creset' --abbrev-commit
+	ll = log --graph --pretty=format:'%C(yellow)%h%Creset %Cred%d%Creset%s %Cgreen(%cr) %C(bold blue)<%cn>' --decorate --numstat
 	fl = log -u
+	lb = !git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) %(color:red)(%(objectname:short))%(color:reset) %(contents:subject) %(color:green)(%(committerdate:relative))%(color:reset) %(color:bold blue)<%(authorname)>'
 	review = fc
 [core]
 	editor = vim
@@ -47,3 +49,8 @@
 [rerere]
 	enabled = true
 	autoupdate = true
+[credential]
+	helper = cache --timeout=28800
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P

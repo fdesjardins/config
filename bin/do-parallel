@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+N=$1
+TASK=$2
+ARGS=$3
+
+open_fifo() {
+  mkfifo pipe-$$
+  exec 3<>pipe-$$
+  rm pipe-$$
+  local i=$1
+  for((; i > 0; i--)); do
+    printf %s 000 >&3
+  done
+}
+
+run_with_lock() {
+  local x
+  read -u 3 -n 3 x && ((0==x)) || exit $x
+  (
+    "$@"
+    printf '%.3d' $? >&3
+  )&
+}
+
+open_fifo $N
+
+for arg in $ARGS; do
+  run_with_lock $TASK $arg
+done

@@ -38,6 +38,8 @@ alias cpv="rsync -avh --progress"
 alias savepage="wget -E -H -k -K -p"
 alias serve="python3 -m http.server"
 alias get="wget --continue --progress=bar --timestamping"
+alias gets="wget -q -O -"
+alias vless="/usr/share/vim/vim80/macros/less.sh"
 
 alias blab="cat /dev/urandom | head -c"
 alias blab64="base64 /dev/urandom | head -c"
@@ -52,8 +54,3 @@ alias dknuke="docker system prune -a"
 
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"
-
-alias ssh-cbtops-prod-db-01="ssh -i ~/.aws/cbtops.pem ubuntu@52.14.244.162"
-alias ssh-cbtops-prod-services-01="ssh -i ~/.aws/cbtops.pem ubuntu@18.221.237.105"
-alias ssh-cbtops-gitlab="ssh -i ~/.aws/cbtops.pem ubuntu@18.188.199.226"
-alias ssh-cbtops-prod-api-01="ssh -i ~/.aws/cbtops.pem ubuntu@18.217.27.106"

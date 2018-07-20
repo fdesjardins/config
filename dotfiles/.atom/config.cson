@@ -13,7 +13,8 @@
       indent_size: 0
       keywords: "lower"
   "atom-ide-ui":
-    "atom-ide-code-format": {}
+    "atom-ide-code-format":
+      formatOnSave: true
     use: {}
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
@@ -25,46 +26,48 @@
       "activate-power-mode"
       "language-csharp"
       "omnisharp-atom"
-      "language-babel"
-      "busy-signal"
-      "git-time-machine"
-      "linter-sass-lint"
-      "prettier-atom"
-      "pigments"
-      "minimap"
-      "linter-docker"
       "language-objective-c"
-      "linter"
+      "markdown-preview"
     ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "nord-atom-syntax"
+      "city-lights-syntax"
     ]
   editor:
     autoIndentOnPaste: false
-    fontSize: 15
     invisibles: {}
   emmet: {}
   "exception-reporting":
     userId: "cd5734c5-c324-bffc-9bf7-c2f3615272de"
+  "file-icons":
+    coloured: false
+    onChanges: true
   "go-plus":
     panel:
       currentHeight: "19.76824061958003vh"
   hidpi:
     scaleFactor: 1
+  "highlight-selected":
+    lightTheme: true
   "language-babel":
     autoIndentJSX: true
   linter: {}
-  "linter-eslint":
-    fixOnSave: true
+  "linter-eslint": {}
   "linter-htmlhint": {}
   "linter-rust":
     cargoCommand: "check"
   "linter-ui-default":
+    alwaysTakeMinimumSpace: true
+    decorateOnTreeView: "Files and Directories"
     panelHeight: 69.23077392578125
-  minimap: {}
+  minimap:
+    absoluteMode: true
+    adjustAbsoluteModeHeight: true
   "one-dark-ui": {}
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
   "pg-formatter":
     editorOptions:
       formatOnSave: true
@@ -75,6 +78,9 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+    prettierOptions:
+      semi: false
+      singleQuote: true
     useEslint: true
   "split-diff":
     diffWords: true
@@ -84,6 +90,8 @@
     scrollSyncType: "Vertical + Horizontal"
   "standard-formatter":
     formatOnSave: true
+  "sync-settings":
+    syncSettings: false
   "tree-view":
     hideVcsIgnoredFiles: true
   welcome:
@@ -91,3 +99,7 @@
 ".editorconfig.source":
   editor:
     autoIndentOnPaste: false
+".js.source":
+  editor:
+    showIndentGuide: false
+    showInvisibles: false

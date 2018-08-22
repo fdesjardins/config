@@ -16,6 +16,8 @@
     "atom-ide-code-format":
       formatOnSave: true
     use: {}
+  "atom-import-sort":
+    sortOnSave: true
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
     useSnippets: true
@@ -28,12 +30,15 @@
       "omnisharp-atom"
       "language-objective-c"
       "markdown-preview"
+      "atom-import-sort"
     ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "city-lights-syntax"
     ]
+  docblockr:
+    align_tags: "no"
   editor:
     autoIndentOnPaste: false
     invisibles: {}
@@ -60,7 +65,8 @@
   "linter-ui-default":
     alwaysTakeMinimumSpace: true
     decorateOnTreeView: "Files and Directories"
-    panelHeight: 69.23077392578125
+    panelHeight: 128
+    showPanel: true
   minimap:
     absoluteMode: true
     adjustAbsoluteModeHeight: true

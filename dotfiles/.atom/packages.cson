@@ -1,5 +1,6 @@
 packages: [
   "atom-beautify"
+  "atom-import-sort"
   "atom-ternjs"
   "autocomplete"
   "autocomplete-modules"
@@ -7,6 +8,7 @@ packages: [
   "busy-signal"
   "city-lights-syntax"
   "clipboard-history"
+  "docblockr"
   "editorconfig"
   "file-icons"
   "highlight-selected"
@@ -17,8 +19,10 @@ packages: [
   "language-babel"
   "language-docker"
   "language-elixir"
+  "language-glsl"
   "language-nginx"
   "language-nunjucks"
+  "language-postcss"
   "linter"
   "linter-csslint"
   "linter-eslint"
@@ -31,5 +35,6 @@ packages: [
   "package-sync"
   "pigments"
   "prettier-atom"
+  "sort-lines"
   "split-diff"
 ]

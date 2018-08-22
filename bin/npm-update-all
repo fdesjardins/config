@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 
 # bunyan-postgres-stream
+# adds
+# airport-diagrams
+# chart-supplements
+# coverage-viewer
+# deedee
+# node-http-client-bench
+# wikiquote
+# wikiquote-cli
+# rvr
+# proxycache
+# terminal-procedures
+# notams
+# papergen
+# papergen-cli
+# paper-rulings
+# postdoc
 P='
-adds
-airport-diagrams
-chart-supplements
-coverage-viewer
-deedee
-node-http-client-bench
-notams
-papergen
-papergen-cli
-paper-rulings
-proxycache
-terminal-procedures
-wikiquote
-wikiquote-cli
-rvr
-postdoc
 '
 
 for package in $P; do

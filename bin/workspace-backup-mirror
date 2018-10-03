@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-src="/media/forrest2/Storage03-2TB-HY1/backup/Archived/"
-dest="/media/forrest2/1tb-hd103si/backup/Archived/"
+src="/media/forrest2/Storage03-2TB-HY1/backup/archive"
+dest="/media/forrest2/1tb-hd103si/backup/archive"
 
 rsync -ah --progress $src $dest

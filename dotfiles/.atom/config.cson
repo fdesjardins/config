@@ -18,6 +18,9 @@
     use: {}
   "atom-import-sort":
     sortOnSave: true
+  "atom-psql":
+    displayKeymapsInfoOnStart: false
+    psql: {}
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
     useSnippets: true
@@ -31,6 +34,9 @@
       "language-objective-c"
       "markdown-preview"
       "atom-import-sort"
+      "language-gfm"
+      "language-markdown"
+      "atom-beautify"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -98,8 +104,9 @@
     formatOnSave: true
   "sync-settings":
     syncSettings: false
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tool-bar":
+    visible: false
+  "tree-view": {}
   welcome:
     showOnStartup: false
 ".editorconfig.source":

@@ -1,27 +1,28 @@
 #!/usr/bin/env bash
 
-# bunyan-postgres-stream
-# adds
-# airport-diagrams
-# chart-supplements
-# coverage-viewer
-# deedee
-# node-http-client-bench
-# wikiquote
-# wikiquote-cli
-# rvr
-# proxycache
-# terminal-procedures
-# notams
-# papergen
-# papergen-cli
-# paper-rulings
-# postdoc
+
 P='
+coverage-viewer
+adds
+airport-diagrams
+chart-supplements
+bunyan-postgres-stream
+deedee
+express-routes-visualizer
+node-http-client-bench
+notams
+paper-rulings
+papergen
+papergen-cli
+postdoc
+rvr
+terminal-procedures
+wikiquote
+wikiquote-cli
 '
 
 for package in $P; do
-  cd ~/Workspace/github/fdesjardins/$package
+  cd ~/Workspace/npm/$package
   ncu -a
   npm i
   yarn

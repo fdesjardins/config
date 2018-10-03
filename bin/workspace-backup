@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 date=$(date +"%Y-%m-%d_%T")
-workspace_src="/home/forrest2/Workspace/"
-workspace_dest="/media/forrest2/Storage03-2TB-HY1/backup/Workspace/"
-gzip_dest="/media/forrest2/Storage03-2TB-HY1/backup/Archived/Workspace/"
+workspace_src="/home/forrest2/"
+workspace_dest="/media/forrest2/Storage03-2TB-HY1/backup/current/"
+gzip_dest="/media/forrest2/Storage03-2TB-HY1/backup/archive/"
 
 rsync -ah --progress $workspace_src $workspace_dest
 tar -cvpzf $gzip_dest$date.tar.gz $workspace_src

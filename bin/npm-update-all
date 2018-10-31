@@ -1,32 +1,24 @@
 #!/usr/bin/env bash
 
 
-P='
-coverage-viewer
-adds
-airport-diagrams
-chart-supplements
-bunyan-postgres-stream
-deedee
-express-routes-visualizer
-node-http-client-bench
-notams
-paper-rulings
-papergen
-papergen-cli
-postdoc
-rvr
-terminal-procedures
-wikiquote
-wikiquote-cli
-'
+# 'coverage-viewer'
+# 'adds'
+# 'airport-diagrams'
+# 'chart-supplements'
+# 'node-http-client-bench'
+# 'deedee'
+# 'express-routes-visualizer'
+# 'notams'
+# 'paper-rulings'
+# 'papergen'
+# 'papergen-cli'
+# 'bunyan-postgres-stream'
+P=(
+  'postdoc'
+  'rvr'
+  'terminal-procedures'
+  'wikiquote'
+  'wikiquote-cli'
+)
 
-for package in $P; do
-  cd ~/Workspace/npm/$package
-  ncu -a
-  npm i
-  yarn
-  git add .
-  git commit -m "update dependencies"
-  np patch
-done
+do-parallel 3 'npm-update-one' "${P[@]}"

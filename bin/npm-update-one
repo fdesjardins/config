@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd ~/Workspace/npm/$1;
+ncu -a;
+npm i;
+yarn;
+git add .;
+git commit -m "update dependencies";
+np patch;

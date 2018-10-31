@@ -24,6 +24,10 @@
   "atom-ternjs":
     inlineFnCompletionDocumentation: true
     useSnippets: true
+  autocomplete:
+    includeCompletionsFromAllBuffers: true
+  "autocomplete-modules":
+    babelPluginModuleResolver: true
   "autocomplete-plus": {}
   core:
     disabledPackages: [
@@ -33,9 +37,39 @@
       "omnisharp-atom"
       "language-objective-c"
       "markdown-preview"
-      "atom-import-sort"
       "language-gfm"
+      "language-glsl"
+      "language-nginx"
+      "language-nunjucks"
+      "language-pgsql"
+      "language-postcss"
+      "language-elixir"
+      "autocomplete"
+      "autocomplete-modules"
+      "autocomplete-paths"
+      "busy-signal"
+      "docblockr"
+      "editorconfig"
+      "file-icons"
+      "highlight-selected"
+      "indent-guide-improved"
+      "intentions"
+      "language-babel"
+      "language-docker"
+      "language-dotenv"
       "language-markdown"
+      "language-pug"
+      "linter"
+      "linter-csslint"
+      "linter-eslint"
+      "linter-ui-default"
+      "markdown-preview-plus"
+      "minimap"
+      "package-sync"
+      "pdf-view"
+      "prettier-atom"
+      "sort-lines"
+      "atom-ternjs"
       "atom-beautify"
     ]
     telemetryConsent: "limited"
@@ -73,6 +107,9 @@
     decorateOnTreeView: "Files and Directories"
     panelHeight: 128
     showPanel: true
+  "markdown-preview-plus":
+    mathConfig:
+      enableLatexRenderingByDefault: true
   minimap:
     absoluteMode: true
     adjustAbsoluteModeHeight: true
@@ -90,6 +127,12 @@
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
+      excludedGlobs: [
+        "*.md"
+        ".babelrc"
+      ]
+      isDisabledIfNotInPackageJson: true
+      showInStatusBar: true
     prettierOptions:
       semi: false
       singleQuote: true
@@ -112,7 +155,12 @@
 ".editorconfig.source":
   editor:
     autoIndentOnPaste: false
+    showIndentGuide: false
 ".js.source":
   editor:
     showIndentGuide: false
     showInvisibles: false
+".md.text":
+  editor:
+    scrollPastEnd: true
+    showIndentGuide: true

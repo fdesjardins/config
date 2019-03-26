@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+src="$1"
+dest="$2"
+scale="$3"
+fps="$4"
+filters="$5"
+
+threads="${NTHREADS:-8}"
+
+_temp_fname() {
+  echo "/tmp/_b_vid2gif_$(cat /dev/urandom | head -c 15 | base32)"
+}
+
+_filters() {
+  local default_fps="15"
+  local default_scale="-1:-1"
+  local default_flags="lanczos"
+
+  local fps="${fps:-$default_fps}"
+  local scale="${default_scale}"
+  local flags="$default_flags"
+
+  echo "fps=$fps,scale=$scale:flags=$flags"
+}
+
+tmpfile=`_temp_fname`
+filters=`_filters`
+
+gen_palette() {
+  ffmpeg -threads "$threads" -i "$src" \
+    -vf "$filters,palettegen" \
+    "$tmpfile.png"
+}
+
+gen_gif() {
+  ffmpeg -threads "$threads" -i "$src" -i "$tmpfile.png" \
+    -filter_complex "$filters [x]; [x][1:v] paletteuse" \
+    "$dest"
+}
+
+scale_gif() {
+  if [ -n "$scale" ]
+  then
+    gifsicle "$dest" --resize-method lanczos2 --resize-width "$scale" -O2 > "$tmpfile.gif"
+    mv "$tmpfile.gif" "$dest"
+  fi
+}
+
+gen_palette &&  gen_gif && scale_gif

@@ -9,13 +9,13 @@ Tested on Ubuntu-based Linux distros. Mostly works on MacOS.
 ### curl
 
 ```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/fdesjardins/config/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/fdesjardins/config/master/install-base.sh)"
 ```
 
 ### wget
 
 ```bash
-sh -c "$(wget https://raw.githubusercontent.com/fdesjardins/config/master/install.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/fdesjardins/config/master/install-base.sh -O -)"
 ```
 
 ## License

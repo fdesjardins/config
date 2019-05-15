@@ -12,7 +12,6 @@ packages=(
   "zsh"
 )
 
-
 sudo apt update && sudo apt install -y "${packages[@]}"
 
 # install oh-my-zsh

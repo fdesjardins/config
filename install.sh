@@ -7,8 +7,7 @@ sudo apt update && sudo apt install -y git
 
 git clone --recursive git://github.com/fdesjardins/config.git
 
-bash config/dotfiles/sync.sh
-
-bash sys/install-base.sh
-bash sys/install-dev.sh
-bash sys/install-node.sh
+bash "$ws/config/dotfiles/sync.sh"
+bash "$ws/config/sys/install-base.sh"
+bash "$ws/config/sys/install-dev.sh"
+bash "$ws/config/sys/install-node.sh"

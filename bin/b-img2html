@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const path = require('path')
+const sh = require('shelljs')
+
+const template = base64 =>
+  `<img src="data:image/png;base64,${base64}" width="400px">`
+
+const usage = () => `
+  b-img2html - generate a base64 <img> element from an image file
+
+  Usage:   b-img2html <imagefile>
+  Example: b-img2html screenshot.png
+`
+
+const error = (msg, ...rest) => {
+  console.error(
+    `
+  Error: ${msg}\n\n`,
+    ...rest,
+    '\n'
+  )
+  usage()
+  process.exit(-1)
+}
+
+const generateImgElement = options => {
+  if (!options.image) {
+    error('no input image specified', { options })
+  }
+  if (!options.image.match(/\.png/g)) {
+    error('only pngs are supported', { options })
+  }
+  const base64 = sh.exec(`cat ${options.image} | base64`, { silent: true })
+  console.log(template(base64.stdout.replace(/\r?\n|\r/g, ' ')))
+}
+
+if (!module.parent) {
+  const [_, dir, ...args] = process.argv
+  generateImgElement({
+    root: dir,
+    image: args[0]
+  })
+}

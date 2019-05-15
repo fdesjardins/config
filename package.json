@@ -1,0 +1,47 @@
+{
+  "name": "@fdesjardins/config",
+  "description": "My dotfiles and other configuration files and utilities.",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/fdesjardins/config/issues"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ],
+    "rules": {
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "array-bracket-spacing": [
+        2,
+        "always"
+      ],
+      "func-style": [
+        2,
+        "expression"
+      ],
+      "prefer-arrow-callback": [
+        2,
+        {
+          "allowNamedFunctions": false
+        }
+      ]
+    }
+  },
+  "homepage": "https://github.com/fdesjardins/config#readme",
+  "keywords": [],
+  "license": "MIT",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fdesjardins/config.git"
+  }
+}

@@ -1,3 +1,4 @@
 dotfiles/.oh-my-zsh/
 dotfiles/.npmrc
-dotfiles/.zsh/secrets.zsh
+dotfiles/.zsh/custom.zsh
+node_modules/

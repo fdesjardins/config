@@ -8,7 +8,7 @@ case "$(uname)" in
   Linux*)  alias ls="ls --color -F" ;;
 esac
 
-alias l="ls -l"
+alias l="ls -l | awk '{ if (NR>=2) print \$NF}'"
 alias ll="ls -lsai"
 alias ...="cd ../../.."
 alias ....="cd ../../../.."
@@ -36,21 +36,23 @@ case "$(uname)" in
 
 alias cpv="rsync -avh --progress"
 alias savepage="wget -E -H -k -K -p"
-alias serve="python3 -m http.server"
 alias get="wget --continue --progress=bar --timestamping"
 alias gets="wget -q -O -"
 alias vless="/usr/share/vim/vim80/macros/less.sh"
 
 alias blab="cat /dev/urandom | head -c"
-alias blab64="base64 /dev/urandom | head -c"
+alias blab32="cat /dev/urandom | base32 | head -c"
+alias blab64="cat /dev/urandom | base64 | head -c"
 
 alias mknm="cpv ~/Workspace/github/fdesjardins/nm/ ~/Workspace/npm/"
 alias nodeup="bash ~/Workspace/config/system/install-node.sh"
 alias syncconfig="cd ~/Workspace/config/ && git add . --all && git commit -m 'sync' && git pom && cd -"
 alias sshpk="cat ~/.ssh/id_rsa.pub | xclip -sel clip && echo 'Copied to clipboard:\n\n'$(cat ~/.ssh/id_rsa.pub)"
 
-alias dk="docker-compose"
-alias dknuke="docker system prune -a"
+alias py3serve="python3 -m http.server"
+alias py2serve="python -m SimpleHTTPServer"
+alias nodeserve="npx http-server"
+alias dockerserve="docker run -p 80:80 -v $(pwd):/usr/share/nginx/html nginx"
 
 alias mkalias="create_alias"
 alias mkenvvar="create_envvar"

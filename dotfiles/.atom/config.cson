@@ -32,11 +32,7 @@
   core:
     disabledPackages: [
       "atom-autocomplete-php"
-      "activate-power-mode"
-      "language-csharp"
-      "omnisharp-atom"
       "language-objective-c"
-      "markdown-preview"
       "language-gfm"
       "language-glsl"
       "language-nginx"
@@ -49,38 +45,33 @@
       "autocomplete-paths"
       "busy-signal"
       "docblockr"
-      "editorconfig"
-      "file-icons"
       "highlight-selected"
-      "indent-guide-improved"
       "intentions"
-      "language-babel"
       "language-docker"
       "language-dotenv"
       "language-markdown"
       "language-pug"
-      "linter"
       "linter-csslint"
-      "linter-eslint"
       "linter-ui-default"
-      "markdown-preview-plus"
       "minimap"
       "package-sync"
       "pdf-view"
-      "prettier-atom"
-      "sort-lines"
       "atom-ternjs"
       "atom-beautify"
+      "markdown-preview"
+      "language-powershell"
+      "omnisharp-atom"
     ]
     telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
-      "city-lights-syntax"
+      "nord-atom-syntax"
     ]
   docblockr:
     align_tags: "no"
   editor:
     autoIndentOnPaste: false
+    fontSize: 13
     invisibles: {}
   emmet: {}
   "exception-reporting":
@@ -110,6 +101,11 @@
   "markdown-preview-plus":
     mathConfig:
       enableLatexRenderingByDefault: true
+    previewConfig:
+      activatePreviewWithEditor: true
+    syncConfig:
+      syncPreviewOnEditorScroll: true
+    useGitHubStyle: true
   minimap:
     absoluteMode: true
     adjustAbsoluteModeHeight: true
@@ -129,9 +125,7 @@
       enabled: true
       excludedGlobs: [
         "*.md"
-        ".babelrc"
       ]
-      isDisabledIfNotInPackageJson: true
       showInStatusBar: true
     prettierOptions:
       semi: false

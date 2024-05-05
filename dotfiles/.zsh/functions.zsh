@@ -27,6 +27,8 @@ create_envvar () {
   source ~/.zsh/environment.zsh;
 }
 
+digall () { dig +noall +answer +multiline $1 any; }
+
 bindkey '\e[3~' delete-char
 bindkey "^[s" insert-sudo
 bindkey '^H' backward-kill-word
